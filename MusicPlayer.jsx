@@ -74,7 +74,18 @@ const songs = [
   ))}
        </ScrollView>
       </View>
+
       
     );
   }
-  
+
+
+ export default function MusicPlayer() {
+
+      const songs = [
+    { title: 'Song One', file: require('./assets/grimes-genesis.mp3') },
+    { title: 'Song Two', file: require('./assets/2NE1-cant-nobody.mp3') },
+    { title: 'Song Three', file: require('./assets/new-jeans-supernatural.mp3') },
+  ];
+
+
