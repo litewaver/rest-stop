@@ -1,53 +1,63 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, Image } from 'react-native';
+import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import FontLoader from './FontLoader'; // our new loader
 
-// Home screen
+// Your current HomeScreen as a function
 function HomeScreen({ navigation }) {
+  const [fontsLoaded] = useFonts({
+    Andika_400Regular,
+  });
+
+if (!fontsLoaded) return <Text>Loading...</Text>;
+
+
   return (
     <View style={[styles.container, styles.center, { backgroundColor: '#87b7ea' }]}>
       <Text style={styles.title}>Welcome to Safe Sounds</Text>
-      <Image source={require('./assets/yoga1.png')} style={{ width: 250, height: 250 }} />
+      <Image
+        source={require('./assets/yoga1.png')}
+        style={{ width: 250, height: 250 }}
+      />
       <Button
         title="Start Meditating"
         onPress={() => navigation.navigate('MusicPlayer')}
       />
       <Text style={styles.andikaText}>
-        Let's find our inner peace ☁️🌿🍃✨️{"\n"}Tap "Start Meditating" to begin.
+        Let's find our inner peace. ☁️🌿🍃✨️ Tap "Start Meditating" to begin.
       </Text>
     </View>
   );
 }
 
-// Music player screen
+// Simple placeholder MusicPlayer screen
 function MusicPlayer() {
   return (
     <View style={[styles.container, styles.center, { backgroundColor: '#d6e7ff' }]}>
-      <Text style={styles.andikaText}>🎵 Music Player Screen</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold' }}>🎵 Music Player Screen</Text>
     </View>
   );
 }
 
+// Create the stack navigator
 const Stack = createNativeStackNavigator();
 
+// Wrap everything inside NavigationContainer
 export default function App() {
   return (
-    <FontLoader>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerStyle: { backgroundColor: '#87b7ea' },
-            headerTintColor: '#070314',
-            headerTitleStyle: { fontWeight: 'bold' },
-          }}
-        >
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </FontLoader>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: '#87b7ea' },
+          headerTintColor: '#0e0528ff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
+      >
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
