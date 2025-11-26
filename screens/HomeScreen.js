@@ -4,57 +4,50 @@ import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// Your current HomeScreen as a function
 function HomeScreen({ navigation }) {
-  const [fontsLoaded] = useFonts({
-    Andika_400Regular,
-  });
-
-if (!fontsLoaded) return <Text>Loading...</Text>;
-
-
   return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#87b7ea' }]}>
-      <Text style={styles.title}>Welcome to Safe Sounds</Text>
-      <Image
-        source={require('./assets/yoga1.png')}
-        style={{ width: 250, height: 250 }}
-      />
-      <Button
-        title="Start Meditating"
-        onPress={() => navigation.navigate('MusicPlayer')}
-      />
-      <Text style={styles.andikaText}>
-        Let's find our inner peace. ☁️🌿🍃✨️ Tap "Start Meditating" to begin.
-      </Text>
+    <View style={[styles.container, styles.center, { backgroundColor: '#031528ff' }]}>
+      <Text style={styles.title}>Welcome to Safer Sounds</Text>
+
+      <Image source={require('./assets/yoga1.png')} style={{ width: 250, height: 250 }} />
+
+      <Button title="Start Meditating" onPress={() => navigation.navigate('MusicPlayer')} />
+
+      <Text style={styles.andikaText}>Let's find our inner peace. ☁️🌿🍃✨️</Text>
+      <Text style={styles.andikaText}>Breathe in... Breathe out... 🧘‍♀</Text>
+      <Text style={styles.andikaText}>"I am safe"</Text>
     </View>
   );
 }
 
-// Simple placeholder MusicPlayer screen
 function MusicPlayer() {
   return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#d6e7ff' }]}>
+    <View style={[styles.container, styles.center, { backgroundColor: '#f9e192ff' }]}>
       <Text style={{ fontSize: 22, fontWeight: 'bold' }}>🎵 Music Player Screen</Text>
     </View>
   );
 }
 
-// Create the stack navigator
 const Stack = createNativeStackNavigator();
 
-// Wrap everything inside NavigationContainer
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Andika_400Regular,
+  });
+
+  if (!fontsLoaded) return <Text>Loading...</Text>;
+
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerStyle: { backgroundColor: '#87b7ea' },
-          headerTintColor: '#0e0528ff',
+          headerStyle: { backgroundColor: '#b2d3f7ff' },
+          headerTintColor: '#060114ff',
           headerTitleStyle: { fontWeight: 'bold' },
+          
         }}
       >
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -65,6 +58,7 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   center: { alignItems: 'center', justifyContent: 'center' },
   title: {
+    fontFamily: 'Andika_400Regular',
     textAlign: 'center',
     fontSize: 24,
     fontWeight: 'bold',
