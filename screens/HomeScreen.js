@@ -4,21 +4,33 @@ import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomeScreen({ navigation }) {
+function HomePage({ navigation }) {
   return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#031528ff' }]}>
+    <View style={[styles.container, styles.center, { backgroundColor: '#cde5ffff' }]}>
       <Text style={styles.title}>Welcome to Safer Sounds</Text>
-
       <Image source={require('./assets/yoga1.png')} style={{ width: 250, height: 250 }} />
 
-      <Button title="Start Meditating" onPress={() => navigation.navigate('MusicPlayer')} />
+      <Button
+        color={'#ecc87aff'}
+        title="Start Meditating"
+        onPress={() => navigation.navigate('MusicPlayer')}
+      />
 
-      <Text style={styles.andikaText}>Let's find our inner peace. ☁️🌿🍃✨️</Text>
-      <Text style={styles.andikaText}>Breathe in... Breathe out... 🧘‍♀</Text>
-      <Text style={styles.andikaText}>"I am safe"</Text>
+      <TouchableOpacity
+        style={styles.customButton}
+        onPress={() => navigation.navigate('HomeScreen')} // navigates to itself
+      >
+        <Text style={styles.customButtonText}>Home Page</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.andikaText}>
+        Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Meditating" to begin.
+      </Text>
+      <BreathingCircle />
     </View>
   );
 }
+
 
 function MusicPlayer() {
   return (

@@ -1,47 +1,68 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import FontLoader from './FontLoader'; // our new loader
+import FontLoader from './FontLoader'; // your font loader
 import BreathingCircle from './BreathingCircle';
 
-
-// Home screen
+// -------------------- Home Page --------------------
 function HomePage({ navigation }) {
   return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#cde5ffff' }]}>
+    <View style={[styles.container, { backgroundColor: '#cde5ffff', paddingTop: 50 }]}>
       <Text style={styles.title}>Welcome to Safer Sounds</Text>
-      <Image source={require('./assets/yoga1.png')} style={{ width: 250, height: 250 }} />
-      <Button color={'#ecc87aff'}
-        title="Start Meditating"
+
+      <Image source={require('./assets/yoga1.png')} style={styles.image} />
+
+      <TouchableOpacity
+        style={styles.customButton}
         onPress={() => navigation.navigate('MusicPlayer')}
-        onPress1={() => alert("Let's Go!")}
-      />
-      <Button style={styles.Button}
-        title="Home"
-        onPress={() => navigation.navigate('HomeScreen')}
-      />
+      >
+        <Text style={styles.customButtonText}>Start Meditating</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.customButton}
+        onPress={() => navigation.popToTop()} // always goes to HomePage
+      >
+        <Text style={styles.customButtonText}>Home Page</Text>
+      </TouchableOpacity>
+
       <Text style={styles.andikaText}>
         Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Meditating" to begin.
       </Text>
+
       <BreathingCircle />
     </View>
   );
 }
 
-// Music player screen
-function MusicPlayer() {
+// -------------------- Music Player Screen --------------------
+function MusicPlayer({ navigation }) {
   return (
     <View style={[styles.container, styles.center, { backgroundColor: '#d6e7ff' }]}>
       <Text style={styles.andikaText}>🎵 Play Music</Text>
-      
+
+      <TouchableOpacity
+        style={[styles.customButton, { marginTop: 30 }]}
+        onPress={() => navigation.popToTop()}
+      >
+        <Text style={styles.customButtonText}>Back to Home</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
+// -------------------- Navigator --------------------
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Andika_400Regular,
+  });
+
+  if (!fontsLoaded) return <Text>Loading...</Text>;
+
   return (
     <FontLoader>
       <NavigationContainer>
@@ -52,7 +73,7 @@ export default function App() {
             headerTitleStyle: { fontWeight: 'bold' },
           }}
         >
-          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="HomeScreen" component={HomePage} />
           <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
         </Stack.Navigator>
       </NavigationContainer>
@@ -60,10 +81,12 @@ export default function App() {
   );
 }
 
+// -------------------- Styles --------------------
 const styles = StyleSheet.create({
   container: { flex: 1 },
   center: { alignItems: 'center', justifyContent: 'center' },
   title: {
+    fontFamily: 'Andika_400Regular',
     textAlign: 'center',
     fontSize: 24,
     fontWeight: 'bold',
@@ -78,13 +101,25 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
   },
-  Button: {
+  image: { width: 250, height: 250, alignSelf: 'center', marginBottom: 20 },
+  customButton: {
+    backgroundColor: "#ecc87aff",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    alignItems: 'center',
     marginTop: 20,
-    color: '#f0be51ff',
-      elevation: 5, // Android
-  shadowColor: "#000", // iOS
-  shadowOpacity: 0.2,
-  shadowOffset: { width: 0, height: 3 },
-  shadowRadius: 4,
+    // Android shadow
+    elevation: 5,
+    // iOS shadow
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 3 },
+    shadowRadius: 5,
+  },
+  customButtonText: {
+    color: "#070314",
+    fontSize: 18,
+    fontWeight: "600",
   },
 });
