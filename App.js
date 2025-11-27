@@ -4,8 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import QuizPlayer from '../safe-sounds-code/screens/QuizScreen';
-import HomeScreen from '../safe-sounds-code/screens/HomeScreen';
-import BreathingCircle from './BreathingCircle';
+import BreathingCircle from '../safe-sounds-code/BreathingCircle';
 
 // -------------------- Home Page --------------------
 function HomePage({ navigation }) {
@@ -17,7 +16,7 @@ function HomePage({ navigation }) {
       <Image
         source={require('./assets/yoga1.png')}
         style={styles.image}
-        defaultSource={require('./assets/placeholder.png')} // optional placeholder
+       /* defaultSource={require('./assets/placeholder.png')} // optional placeholder */
       />
 
       <TouchableOpacity

@@ -1,3 +1,5 @@
+  
+
 function HomeScreen({ navigation }) {
   return (
     <View style={[styles.container, styles.center, { backgroundColor: '#cde5ffff' }]}>
