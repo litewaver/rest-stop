@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 
   },
   choiceText: {
-    fontSize: 10,
+    fontSize: 22,
     textAlign: 'center',
     
   },

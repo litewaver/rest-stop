@@ -88,4 +88,4 @@ const songs = [
     { title: 'Song Three', file: require('./assets/new-jeans-supernatural.mp3') },
   ];
 
-
+ }

@@ -12,15 +12,15 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
-import QuizPlayer from '../safe-sounds-code/screens/QuizScreen';
-import BreathingCircle from '../safe-sounds-code/BreathingCircle';
+import QuizPlayer from './screens/QuizScreen';
+import BreathingCircle from './screens/BreathingCircle';
 import { BlurView } from 'expo-blur';
 
 // -------------------- Home Page --------------------
 function HomePortal({ navigation }) {
   return (
     <ImageBackground
-      source={require('../assets/pic/background1.jpg')} // background image
+      source={require('../safe-sounds-code/assets/pic/background1.jpg')} // background image
       style={{ flex: 1 }}
       resizeMode="cover"
     >
@@ -29,7 +29,7 @@ function HomePortal({ navigation }) {
         <BlurView intensity={90} tint="light" style={styles.glassOverlay}>
           <Text style={styles.title}>Welcome to Safer Sounds</Text>
 
-          <Image source={require('../assets/yoga1.png')} style={styles.image} />
+          <Image source={require('../safe-sounds-code/assets/pic/yoga1.png')} style={styles.image} />
 
           <TouchableOpacity
             style={styles.customButton}
@@ -42,7 +42,7 @@ function HomePortal({ navigation }) {
             Let's find our inner peace! ☁️🌿🍃✨️{"\n"}Press "Start Meditating"
           </Text>
 
-          {BreathingCircle ? <BreathingCircle /> : <Text>Loading circle...</Text>}
+           <BreathingCircle /> 
         </BlurView>
       </ScrollView>
     </ImageBackground>
@@ -50,10 +50,7 @@ function HomePortal({ navigation }) {
 }
 
 // -------------------- Quiz Page --------------------
-function QuizPage() {
-  return QuizPlayer ? <QuizPlayer /> : <Text>Loading quiz...</Text>;
-}
-
+ <QuizPlayer />
 // -------------------- Navigator --------------------
 const Stack = createNativeStackNavigator();
 
@@ -80,7 +77,8 @@ export default function App() {
       >
         {/* Use HomePortal as your main screen */}
         <Stack.Screen name="HomeScreen" component={HomePortal} />
-        <Stack.Screen name="QuizScreen" component={QuizPage} />
+        <Stack.Screen name="QuizScreen" component={QuizPlayer} />
+        <Stack.Screen name=" " component={} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -103,6 +101,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 20,
     alignItems: 'center',
+    overflow: 'hidden',
   },
   title: {
     fontFamily: 'Andika_400Regular',
