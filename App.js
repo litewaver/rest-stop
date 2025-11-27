@@ -1,9 +1,10 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
+import { Text, View, StyleSheet, Image, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import FontLoader from './FontLoader'; // your font loader
+import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
+import QuizPlayer from '../safe-sounds-code/screens/QuizScreen';
+import HomeScreen from '../safe-sounds-code/screens/HomeScreen';
 import BreathingCircle from './BreathingCircle';
 
 // -------------------- Home Page --------------------
@@ -12,72 +13,65 @@ function HomePage({ navigation }) {
     <View style={[styles.container, { backgroundColor: '#cde5ffff', paddingTop: 50 }]}>
       <Text style={styles.title}>Welcome to Safer Sounds</Text>
 
-      <Image source={require('./assets/yoga1.png')} style={styles.image} />
+      {/* Safe image check */}
+      <Image
+        source={require('./assets/yoga1.png')}
+        style={styles.image}
+        defaultSource={require('./assets/placeholder.png')} // optional placeholder
+      />
 
       <TouchableOpacity
         style={styles.customButton}
-        onPress={() => navigation.navigate('MusicPlayer')}
+        onPress={() => navigation.navigate('QuizScreen')}
       >
         <Text style={styles.customButtonText}>Start Meditating</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.customButton}
-        onPress={() => navigation.popToTop()} // always goes to HomePage
-      >
-        <Text style={styles.customButtonText}>Home Page</Text>
       </TouchableOpacity>
 
       <Text style={styles.andikaText}>
         Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Meditating" to begin.
       </Text>
 
-      <BreathingCircle />
+      {/* Safe BreathingCircle rendering */}
+      {BreathingCircle ? <BreathingCircle /> : <Text>Loading circle...</Text>}
     </View>
   );
 }
 
-// -------------------- Music Player Screen --------------------
-function MusicPlayer({ navigation }) {
-  return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#d6e7ff' }]}>
-      <Text style={styles.andikaText}>🎵 Play Music</Text>
-
-      <TouchableOpacity
-        style={[styles.customButton, { marginTop: 30 }]}
-        onPress={() => navigation.popToTop()}
-      >
-        <Text style={styles.customButtonText}>Back to Home</Text>
-      </TouchableOpacity>
-    </View>
-  );
+// -------------------- Quiz Page --------------------
+function QuizPage() {
+  return QuizPlayer ? <QuizPlayer /> : <Text>Loading quiz...</Text>;
 }
 
 // -------------------- Navigator --------------------
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Andika_400Regular,
-  });
+  // -------------------- Load fonts safely --------------------
+  const [fontsLoaded] = useFonts({ Andika_400Regular });
 
-  if (!fontsLoaded) return <Text>Loading...</Text>;
+  if (!fontsLoaded) {
+    return (
+      <View style={[styles.container, styles.center]}>
+        <ActivityIndicator size="large" color="#87b7ea" />
+        <Text style={{ marginTop: 10 }}>Loading fonts...</Text>
+      </View>
+    );
+  }
 
+  // -------------------- Render Navigation --------------------
   return (
-    <FontLoader>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerStyle: { backgroundColor: '#87b7ea' },
-            headerTintColor: '#070314',
-            headerTitleStyle: { fontWeight: 'bold' },
-          }}
-        >
-          <Stack.Screen name="HomeScreen" component={HomePage} />
-          <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </FontLoader>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: '#87b7ea' },
+          headerTintColor: '#070314',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
+      >
+        <Stack.Screen name="HomeScreen" component={HomePage} />
+        <Stack.Screen name="QuizScreen" component={QuizPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -109,17 +103,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     marginTop: 20,
-    // Android shadow
     elevation: 5,
-    // iOS shadow
     shadowColor: "#000",
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 5,
   },
-  customButtonText: {
-    color: "#070314",
-    fontSize: 18,
-    fontWeight: "600",
-  },
+  customButtonText: { color: "#070314", fontSize: 18, fontWeight: "600" },
 });

@@ -1,70 +1,30 @@
-import React from 'react';
-import { Text, View, StyleSheet, Button, Image } from 'react-native';
-import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-function HomePage({ navigation }) {
+function HomeScreen({ navigation }) {
   return (
     <View style={[styles.container, styles.center, { backgroundColor: '#cde5ffff' }]}>
       <Text style={styles.title}>Welcome to Safer Sounds</Text>
       <Image source={require('./assets/yoga1.png')} style={{ width: 250, height: 250 }} />
 
-      <Button
-        color={'#ecc87aff'}
-        title="Start Meditating"
-        onPress={() => navigation.navigate('MusicPlayer')}
-      />
-
       <TouchableOpacity
         style={styles.customButton}
-        onPress={() => navigation.navigate('HomeScreen')} // navigates to itself
+        onPress={() => navigation.navigate('QuizScreen')}
       >
-        <Text style={styles.customButtonText}>Home Page</Text>
+        <Text style={styles.customButtonText}>Start Quiz</Text>
       </TouchableOpacity>
 
+      <Button
+        title="Home Page"
+        onPress={() => navigation.popToTop()}
+      />
+
       <Text style={styles.andikaText}>
-        Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Meditating" to begin.
+        Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Quiz" to begin.
       </Text>
+
       <BreathingCircle />
     </View>
   );
 }
 
-
-function MusicPlayer() {
-  return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#f9e192ff' }]}>
-      <Text style={{ fontSize: 22, fontWeight: 'bold' }}>🎵 Music Player Screen</Text>
-    </View>
-  );
-}
-
-const Stack = createNativeStackNavigator();
-
-export default function App() {
-  const [fontsLoaded] = useFonts({
-    Andika_400Regular,
-  });
-
-  if (!fontsLoaded) return <Text>Loading...</Text>;
-
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: '#b2d3f7ff' },
-          headerTintColor: '#060114ff',
-          headerTitleStyle: { fontWeight: 'bold' },
-          
-        }}
-      >
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
@@ -85,4 +45,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 20,
   },
+  customButton: {
+    backgroundColor: '#ecc87aff',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    marginTop: 20,
+    alignItems: 'center',
+  },
+  customButtonText: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#070314',
+  },
 });
+export default HomeScreen;
