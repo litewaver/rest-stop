@@ -1,64 +1,149 @@
-  
+import React from 'react';
+import { Text, View, StyleSheet, Image, TouchableOpacity, ActivityIndicator, ScrollView, ImageBackground } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
+import QuizPlayer from '../screens/QuizScreen';
+import { BlurView } from 'expo-blur';
 
-function HomeScreen({ navigation }) {
+// -------------------- Home Page --------------------
+function HomePortal({ navigation }) {
   return (
-    <View style={[styles.container, styles.center, { backgroundColor: '#cde5ffff' }]}>
-      <Text style={styles.title}>Welcome to Safer Sounds</Text>
-      <Image source={require('./assets/yoga1.png')} style={{ width: 250, height: 250 }} />
+    <ImageBackground
+      source={require('../assets/pic/background1')} // put your background image here
+      style={{ flex: 1 }}
+      resizeMode="cover"
+    >
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <BlurView intensity={90} tint="light" style={styles.glassOverlay}>
+          <Text style={styles.title}>Welcome to Safer Sounds</Text>
 
-      <TouchableOpacity
-        style={styles.customButton}
-        onPress={() => navigation.navigate('QuizScreen')}
-      >
-        <Text style={styles.customButtonText}>Start Quiz</Text>
-      </TouchableOpacity>
+          <BlurView intensity={60} tint="light" style={styles.card}>
+            <Image
+              source={require('./assets/yoga1.png')}
+              style={styles.image}
+            />
+          </BlurView>
 
-      <Button
-        title="Home Page"
-        onPress={() => navigation.popToTop()}
-      />
+          <BlurView intensity={60} tint="light" style={styles.card}>
+            <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate('QuizScreen')}
+            >
+              <Text style={styles.customButtonText}>Start Meditating</Text>
+            </TouchableOpacity>
+          </BlurView>
 
-      <Text style={styles.andikaText}>
-        Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Quiz" to begin.
-      </Text>
+          <BlurView intensity={60} tint="light" style={styles.card}>
+            <Text style={styles.andikaText}>
+              Let's find our inner peace! ☁️🌿🍃✨️{"\n"}Press "Start Meditating"
+            </Text>
+          </BlurView>
 
-      <BreathingCircle />
-    </View>
+          <BlurView intensity={60} tint="light" style={styles.card}>
+            {BreathingCircle ? <BreathingCircle /> : <Text>Loading circle...</Text>}
+          </BlurView>
+        </BlurView>
+      </ScrollView>
+    </ImageBackground>
   );
 }
 
+// -------------------- Quiz Page --------------------
+function QuizPage() {
+  return QuizPlayer ? <QuizPlayer /> : <Text>Loading quiz...</Text>;
+}
 
+// -------------------- Navigator --------------------
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  const [fontsLoaded] = useFonts({ Andika_400Regular });
+
+  if (!fontsLoaded) {
+    return (
+      <View style={[styles.container, styles.center]}>
+        <ActivityIndicator size="large" color="#87b7ea" />
+        <Text style={{ marginTop: 10 }}>Loading fonts...</Text>
+      </View>
+    );
+  }
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: '#87b7ea' },
+          headerTintColor: '#070314',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
+      >
+        <Stack.Screen name="HomeScreen" component={HomePortal} />
+        <Stack.Screen name="QuizScreen" component={QuizPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// -------------------- Styles --------------------
 const styles = StyleSheet.create({
   container: { flex: 1 },
   center: { alignItems: 'center', justifyContent: 'center' },
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  glassOverlay: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+  },
+  card: {
+    width: '90%',
+    backgroundColor: 'rgba(255,255,255,0.15)',
+    borderRadius: 20,
+    padding: 15,
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.2)',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.25,
+    shadowRadius: 20,
+    elevation: 10,
+    alignItems: 'center',
+  },
   title: {
     fontFamily: 'Andika_400Regular',
-    textAlign: 'center',
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: '#070314',
+    color: '#fff',
     marginBottom: 20,
+    textAlign: 'center',
   },
   andikaText: {
     fontFamily: 'Andika_400Regular',
     fontSize: 18,
-    color: '#070314',
-    marginTop: 20,
+    color: '#fff',
     textAlign: 'center',
-    paddingHorizontal: 20,
   },
+  image: { width: 250, height: 250, borderRadius: 20 },
   customButton: {
-    backgroundColor: '#ecc87aff',
+    backgroundColor: 'rgba(236,200,122,0.8)',
     paddingVertical: 12,
     paddingHorizontal: 20,
-    borderRadius: 10,
-    marginTop: 20,
+    borderRadius: 15,
     alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
   },
-  customButtonText: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#070314',
-  },
+  customButtonText: { color: '#070314', fontSize: 18, fontWeight: '600' },
 });
-export default HomeScreen;

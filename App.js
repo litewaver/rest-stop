@@ -1,38 +1,51 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, ActivityIndicator } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  ActivityIndicator,
+  ScrollView,
+  ImageBackground,
+} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import QuizPlayer from '../safe-sounds-code/screens/QuizScreen';
 import BreathingCircle from '../safe-sounds-code/BreathingCircle';
+import { BlurView } from 'expo-blur';
 
 // -------------------- Home Page --------------------
-function HomePage({ navigation }) {
+function HomePortal({ navigation }) {
   return (
-    <View style={[styles.container, { backgroundColor: '#cde5ffff', paddingTop: 50 }]}>
-      <Text style={styles.title}>Welcome to Safer Sounds</Text>
+    <ImageBackground
+      source={require('../assets/pic/background1.jpg')} // background image
+      style={{ flex: 1 }}
+      resizeMode="cover"
+    >
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        {/* Glass overlay */}
+        <BlurView intensity={90} tint="light" style={styles.glassOverlay}>
+          <Text style={styles.title}>Welcome to Safer Sounds</Text>
 
-      {/* Safe image check */}
-      <Image
-        source={require('./assets/yoga1.png')}
-        style={styles.image}
-       /* defaultSource={require('./assets/placeholder.png')} // optional placeholder */
-      />
+          <Image source={require('../assets/yoga1.png')} style={styles.image} />
 
-      <TouchableOpacity
-        style={styles.customButton}
-        onPress={() => navigation.navigate('QuizScreen')}
-      >
-        <Text style={styles.customButtonText}>Start Meditating</Text>
-      </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.customButton}
+            onPress={() => navigation.navigate('QuizScreen')}
+          >
+            <Text style={styles.customButtonText}>Start Meditating</Text>
+          </TouchableOpacity>
 
-      <Text style={styles.andikaText}>
-        Let's find our inner peace ☁️🌿🍃✨️{"\n"}Press "Start Meditating" to begin.
-      </Text>
+          <Text style={styles.andikaText}>
+            Let's find our inner peace! ☁️🌿🍃✨️{"\n"}Press "Start Meditating"
+          </Text>
 
-      {/* Safe BreathingCircle rendering */}
-      {BreathingCircle ? <BreathingCircle /> : <Text>Loading circle...</Text>}
-    </View>
+          {BreathingCircle ? <BreathingCircle /> : <Text>Loading circle...</Text>}
+        </BlurView>
+      </ScrollView>
+    </ImageBackground>
   );
 }
 
@@ -45,7 +58,6 @@ function QuizPage() {
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  // -------------------- Load fonts safely --------------------
   const [fontsLoaded] = useFonts({ Andika_400Regular });
 
   if (!fontsLoaded) {
@@ -57,7 +69,6 @@ export default function App() {
     );
   }
 
-  // -------------------- Render Navigation --------------------
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -67,7 +78,8 @@ export default function App() {
           headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
-        <Stack.Screen name="HomeScreen" component={HomePage} />
+        {/* Use HomePortal as your main screen */}
+        <Stack.Screen name="HomeScreen" component={HomePortal} />
         <Stack.Screen name="QuizScreen" component={QuizPage} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -78,35 +90,48 @@ export default function App() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   center: { alignItems: 'center', justifyContent: 'center' },
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  glassOverlay: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+  },
   title: {
     fontFamily: 'Andika_400Regular',
-    textAlign: 'center',
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#070314',
+    color: '#fff',
     marginBottom: 20,
+    textAlign: 'center',
   },
   andikaText: {
     fontFamily: 'Andika_400Regular',
     fontSize: 18,
-    color: '#070314',
-    marginTop: 20,
+    color: '#fff',
     textAlign: 'center',
-    paddingHorizontal: 20,
+    marginTop: 20,
   },
-  image: { width: 250, height: 250, alignSelf: 'center', marginBottom: 20 },
+  image: { width: 250, height: 250, borderRadius: 20, marginBottom: 20 },
   customButton: {
-    backgroundColor: "#ecc87aff",
+    backgroundColor: 'rgba(236,200,122,0.8)',
     paddingVertical: 12,
     paddingHorizontal: 20,
-    borderRadius: 10,
+    borderRadius: 15,
     alignItems: 'center',
     marginTop: 20,
     elevation: 5,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 3 },
-    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
   },
-  customButtonText: { color: "#070314", fontSize: 18, fontWeight: "600" },
+  customButtonText: { color: '#070314', fontSize: 18, fontWeight: '600' },
 });
