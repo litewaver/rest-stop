@@ -10,10 +10,6 @@ export default function GlassScreen() {
     >
       {/* Full-screen glass overlay */}
       <BlurView intensity={80} tint="light" style={styles.glassOverlay}>
-        <Text style={styles.title}>Glassmorphic Screen ✨</Text>
-        <View style={styles.card}>
-          <Text style={styles.cardText}>This is a frosted glass card</Text>
-        </View>
       </BlurView>
     </ImageBackground>
   );

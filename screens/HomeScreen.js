@@ -1,16 +1,16 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, ActivityIndicator, ScrollView, ImageBackground } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import QuizPlayer from '../screens/QuizScreen';
 import { BlurView } from 'expo-blur';
+import BreathingCircle from '../components/BreathingCircle';
 
 // -------------------- Home Page --------------------
 function HomePortal({ navigation }) {
   return (
     <ImageBackground
-      source={require('../assets/pic/background1')} // put your background image here
+      source={require('../assets/pic/background1.jpg')} // background image
       style={{ flex: 1 }}
       resizeMode="cover"
     >
@@ -20,7 +20,7 @@ function HomePortal({ navigation }) {
 
           <BlurView intensity={60} tint="light" style={styles.card}>
             <Image
-              source={require('./assets/yoga1.png')}
+              source={require('../assets/yoga1.png')}
               style={styles.image}
             />
           </BlurView>
@@ -31,6 +31,12 @@ function HomePortal({ navigation }) {
               onPress={() => navigation.navigate('QuizScreen')}
             >
               <Text style={styles.customButtonText}>Start Meditating</Text>
+            </TouchableOpacity>
+                        <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate('SongScreen')}
+            >
+              <Text style={styles.customButtonText}>Start Listening</Text>
             </TouchableOpacity>
           </BlurView>
 
@@ -55,35 +61,7 @@ function QuizPage() {
 }
 
 // -------------------- Navigator --------------------
-const Stack = createNativeStackNavigator();
 
-export default function App() {
-  const [fontsLoaded] = useFonts({ Andika_400Regular });
-
-  if (!fontsLoaded) {
-    return (
-      <View style={[styles.container, styles.center]}>
-        <ActivityIndicator size="large" color="#87b7ea" />
-        <Text style={{ marginTop: 10 }}>Loading fonts...</Text>
-      </View>
-    );
-  }
-
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: '#87b7ea' },
-          headerTintColor: '#070314',
-          headerTitleStyle: { fontWeight: 'bold' },
-        }}
-      >
-        <Stack.Screen name="HomeScreen" component={HomePortal} />
-        <Stack.Screen name="QuizScreen" component={QuizPage} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 
 // -------------------- Styles --------------------
 const styles = StyleSheet.create({

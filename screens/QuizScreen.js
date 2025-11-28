@@ -17,6 +17,18 @@ export default function QuizPlayer() {
       question: "How old are you?", 
       choices: ["👶 2-4", "🧒 5-7", "🧑 8-10", "👦 11-13", "⭐ 14+"] 
     },
+    {
+      question: "Which of these helps you relax?",
+      choices: [
+        "Crying 😭",
+        "Arguing 🗣️",
+        "Overthinking 🤯",
+        "Caffeine ☕",
+        "Yelling 😤",
+        "Playing🤸‍♂️",
+
+      ],
+    },
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
