@@ -1,20 +1,19 @@
 import React from 'react';
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { StyleSheet, ImageBackground } from 'react-native';
 import { BlurView } from 'expo-blur'; // or @react-native-community/blur
 
 export default function GlassScreen() {
   return (
     <ImageBackground
-      source={require('../safe-sounds-code/assets/pic/backgroud1.jpg')} // example background
-      style={styles.background}
+      source={require('../assets/pic/background1.jpg')} // ⭐ Also missing closing quote
+      style={styles.background} // ⭐ Change "styles" to "style"
     >
       {/* Full-screen glass overlay */}
-      <BlurView intensity={80} tint="light" style={styles.glassOverlay}>
+      <BlurView intensity={80} tint="light" style={styles.glassOverlay}> {/* ⭐ Change "styles" to "style" */}
       </BlurView>
     </ImageBackground>
   );
 }
-
 const styles = StyleSheet.create({
   background: {
     flex: 1,
