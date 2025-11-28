@@ -8,35 +8,35 @@ import {
   Button,
   StyleSheet,
 } from "react-native";
-import { Audio } from "expo-av"; // ⭐ MISSING IMPORT!
+import { Audio } from "expo-audio"; // ⭐ NEW PACKAGE
 
 // Song list
 const songs = [
   {
-    title: "Song One",
-    file: require("../../assets/songs/twice-dance-the-night-away.mp3"), // ⭐ Fixed to ../../
+    title: "Twice - Dance the Night Away",
+    file: require("../../assets/songs/twice-dance-the-night-away.mp3"),
     image: require("../../assets/pic/bibimbap.jpg"),
   },
   {
-    title: "Song Two",
-    file: require("../../assets/songs/4minute-hot-issue.mp3"), // ⭐ Fixed to ../../
+    title: "4minute - Hot Issue",
+    file: require("../../assets/songs/4minute-hot-issue.mp3"),
     image: require("../../assets/pic/bibimbap.jpg"),
   },
 ];
 
-export default function MusicPlayer() {
+export default function SongScreen() {
   const [sound, setSound] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false); // prevent double clicks
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Play a song
+  // Play new song
   async function playSong(index = currentIndex) {
-    if (isLoading) return; // prevent race condition
+    if (isLoading) return;
     setIsLoading(true);
 
     try {
-      // Stop previous sound
+      // Stop old sound
       if (sound) {
         await sound.stopAsync();
         await sound.unloadAsync();
@@ -44,18 +44,15 @@ export default function MusicPlayer() {
 
       console.log("Loading:", songs[index].title);
 
-      const { sound: newSound } = await Audio.Sound.createAsync(
-        songs[index].file
-      );
+      // ⭐ NEW expo-audio syntax
+      const newSound = new Audio.Sound();
+      await newSound.loadAsync(songs[index].file);
 
       setSound(newSound);
       setCurrentIndex(index);
 
-      // Set playback status
       newSound.setOnPlaybackStatusUpdate((status) => {
-        if (status.didJustFinish) {
-          handleNext();
-        }
+        if (status.didJustFinish) handleNext();
       });
 
       console.log("Playing:", songs[index].title);
@@ -68,7 +65,7 @@ export default function MusicPlayer() {
     }
   }
 
-  // Play / Pause
+  // Play/Pause
   async function handlePlayPause() {
     if (!sound) {
       playSong(currentIndex);
@@ -92,24 +89,22 @@ export default function MusicPlayer() {
     }
   }
 
-  // Next song
+  // Next track
   function handleNext() {
     const nextIndex = (currentIndex + 1) % songs.length;
     playSong(nextIndex);
   }
 
-  // Previous song
+  // Previous track
   function handlePrev() {
     const prevIndex = (currentIndex - 1 + songs.length) % songs.length;
     playSong(prevIndex);
   }
 
-  // Cleanup on unmount
+  // Cleanup audio on unmount
   useEffect(() => {
     return () => {
-      if (sound) {
-        sound.unloadAsync();
-      }
+      if (sound) sound.unloadAsync();
     };
   }, [sound]);
 
@@ -128,25 +123,22 @@ export default function MusicPlayer() {
         <Button title="⏭ Next" onPress={handleNext} />
       </View>
 
-      {/* Song picker */}
+      {/* Song Picker */}
       <ScrollView
         horizontal
         contentContainerStyle={{ paddingHorizontal: 10 }}
         style={{ marginBottom: 20 }}
       >
         {songs.map((song, index) => (
-          <Pressable
-            key={index}
-            onPress={() => playSong(index)}
-            style={{ marginRight: 10 }}
-          >
+          <Pressable key={index} onPress={() => playSong(index)}>
             <Image
               source={song.image}
               style={{
                 width: 100,
                 height: 100,
                 borderRadius: 10,
-                borderWidth: currentIndex === index ? 2 : 0,
+                marginRight: 10,
+                borderWidth: currentIndex === index ? 3 : 0,
                 borderColor: "#007AFF",
               }}
             />

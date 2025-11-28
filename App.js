@@ -1,13 +1,15 @@
 import React from 'react';
-import HomePortal from './src/screens/HomeScreen';
+import HomeScreen from './src/screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import QuizPlayer from './src/screens/QuizScreen';
-import SongPlaylist from './src/screens/SongScreen';
+import BreathingScreen from './src/screens/BreathingScreen';
+import SongScreen from './src/screens/SongScreen';
 import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import { ActivityIndicator, View } from 'react-native';
 
 // -------------------- Navigator --------------------
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -26,15 +28,16 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerStyle: { backgroundColor: '#06121fff' },
+          headerStyle: { backgroundColor: 'none' },
           headerTintColor: '#433868ff',
           headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
         {/* Use HomePortal as your main screen */}
-        <Stack.Screen name="HomeScreen" component={HomePortal} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="QuizScreen" component={QuizPlayer} />
-        <Stack.Screen name="SongScreen" component={SongPlaylist} />
+        <Stack.Screen name="BreathingScreen" component={BreathingScreen} />
+        <Stack.Screen name="SongScreen" component={SongScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

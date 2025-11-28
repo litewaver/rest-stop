@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
 
-export default function QuizPlayer() {
+export default function QuizScreen() {
   const questions = [
     { 
       question: "How are you feeling today?", 
@@ -23,7 +23,9 @@ export default function QuizPlayer() {
         "Overthinking 🤯",
         "Caffeine ☕",
         "Yelling 😤",
-        "Playing🤸‍♂️",
+        "Playing 🤸‍♂️",
+        "Drawing 🎨",
+        "Listening to Music (good choice!)💃",
       ],
     },
   ];
@@ -60,8 +62,9 @@ export default function QuizPlayer() {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        alert("yay!");
+        // Quiz complete - go to breathing exercise
         setCurrentQuestion(0);
+        navigation.navigate('BreathingScreen');
       }
     }, 500);
   };
