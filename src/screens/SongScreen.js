@@ -7,6 +7,7 @@ import {
   Text,
   Button,
   StyleSheet,
+  ImageBackground,
 } from "react-native";
 import { Audio } from "expo-audio"; // ⭐ NEW PACKAGE
 
@@ -21,6 +22,16 @@ const songs = [
     title: "4minute - Hot Issue",
     file: require("../../assets/songs/4minute-hot-issue.mp3"),
     image: require("../../assets/pic/bibimbap.jpg"),
+  },
+  {
+    title: "Blond:ish - Sete",
+    file: require("../../assets/songs/blondish-sete.mp3"),
+    image: require("../../assets/pic/eurovision.jpg"),
+  },
+  {
+    title: "Go_A - Shum",
+    file: require("../../assets/songs/go-a-shum.mp3"),
+    image: require("../../assets/pic/eurovision.jpg"),
   },
 ];
 
@@ -109,9 +120,14 @@ export default function SongScreen() {
   }, [sound]);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Now Playing:</Text>
-      <Text style={styles.song}>{songs[currentIndex].title}</Text>
+    <ImageBackground
+      source={require('../../assets/pic/space.jpeg')}
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <View style={styles.box}>
+        <Text style={styles.title}>Now Playing:</Text>
+        <Text style={styles.song}>{songs[currentIndex].title}</Text>
 
       <View style={styles.controls}>
         <Button title="⏮ Prev" onPress={handlePrev} />
@@ -145,7 +161,9 @@ export default function SongScreen() {
           </Pressable>
         ))}
       </ScrollView>
-    </View>
+      
+      </View>
+    </ImageBackground>
   );
 }
 
@@ -153,7 +171,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#fff",
+    backgroundColor: "transparent",
+  },
+  background: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
   },
   title: {
     fontSize: 24,
@@ -168,5 +191,23 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     marginBottom: 20,
+    justifyContent: "center",
+    alignItems: "center",
+
+  },
+    box: {
+    alignItems: "center",
+    justifyContent: "center",
+
+    margin: 10,
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: "#5cb5bbff",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 8 // for Android shadow
   },
 });

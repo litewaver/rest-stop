@@ -17,34 +17,44 @@ function HomeScreen({ navigation }) {
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <BlurView intensity={90} tint="light" style={styles.glassOverlay}>
-          <Text style={styles.title}>Welcome to Safer Sounds</Text>
+        <BlurView intensity={40} tint="light" style={styles.glassOverlay}>
+          <Text style={styles.title}>Safer Sounds</Text>
 
-          <BlurView intensity={60} tint="light" style={styles.card}>
+          <View intensity={60} tint="light" style={styles.card}>
             <Image
-              source={require('../../assets/pic/yoga1.png')} // Fixed: yoga1.png is actually in assets/pic/
+              source={require('../../assets/pic/yoga1.png')}
+              
               style={styles.image}
             />
-          </BlurView>
+          </View>
 
-          <BlurView intensity={60} tint="light" style={styles.card}>
-            <TouchableOpacity
-              style={styles.customButton}
-              onPress={() => navigation.navigate('QuizScreen')}
-            >
-              <Text style={styles.customButtonText}>Start Meditating</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.customButton, { marginTop: 10 }]}
-              onPress={() => navigation.navigate('SongScreen')}
-            >
-              <Text style={styles.customButtonText}>Start Listening</Text>
-            </TouchableOpacity>
-          </BlurView>
+<View style={[styles.card, styles.row]} intensity={10} tint="light">
+  <TouchableOpacity
+    style={[styles.customButton, { flex: 1, marginRight: 5 }]}
+    onPress={() => navigation.navigate("QuizScreen")}
+  >
+    <Text style={styles.customButtonText}>Check In</Text>
+  </TouchableOpacity>
+
+  <TouchableOpacity
+    style={[styles.customButton, { flex: 1, marginHorizontal: 5 }]}
+    onPress={() => navigation.navigate("SongScreen")}
+  >
+    <Text style={styles.customButtonText}>Start Listening</Text>
+  </TouchableOpacity>
+
+  <TouchableOpacity
+    style={[styles.customButton, { flex: 1, marginLeft: 5 }]}
+    onPress={() => navigation.navigate("BreathingScreen")}
+  >
+    <Text style={styles.customButtonText}>Quick Start</Text>
+  </TouchableOpacity>
+</View>
+
 
           <BlurView intensity={60} tint="light" style={styles.card}>
             <Text style={styles.andikaText}>
-              Let's find our inner peace! ☁️🌿🍃✨️{"\n"}Press "Start Meditating"
+              Let's find our inner peace! ☁️🌿🍃✨️{"\n"}Press any button.
             </Text>
           </BlurView>
 
@@ -67,19 +77,19 @@ function HomeScreen({ navigation }) {
         visible={modalVisible}
         onRequestClose={() => setModalVisible(false)}
       >
-        <View style={styles.modalOverlay}>
-          <BlurView intensity={80} tint="light" style={styles.modalContent}>
+        <View style={styles.modalOverlay} >
+          <BlurView intensity={30} tint="light" style={styles.modalContent}>
             <Text style={styles.modalTitle}>Welcome! 🌟</Text>
             <Text style={styles.modalText}>
               Safer Sounds is your companion for relaxation and mindfulness.
               {"\n\n"}
-              Dive into calming breathing exercises and soothing music to help
-              you unwind and find your inner peace. {"\n\n"}This app is in it's beta stages, but we wanted
-              to release this as soon as possible to help guide you towards greatness🌈🍃
+              We created this to help those suffering, struggling, or simply exist better.
+               {"\n\n"}This app is in it's beta stages, but we wanted
+              to release this as soon as possible to help guide you towards greatness in little ways🌈🍃
             </Text>
 
             <TouchableOpacity style={styles.linkButton} onPress={openLink}>
-              <Text style={styles.linkButtonText}>🔗 Donations appreciated!</Text>
+              <Text style={styles.linkButtonText}>🔗 Donations appreciated! </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -95,6 +105,7 @@ function HomeScreen({ navigation }) {
   );
 }
 
+export default HomeScreen;
 
 // -------------------- Styles --------------------
 const styles = StyleSheet.create({
@@ -133,19 +144,19 @@ const styles = StyleSheet.create({
     fontFamily: 'Andika_400Regular',
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#fff',
+    color: '#270c4bff',
     marginBottom: 20,
-    textAlign: 'center',
+    textAlign: 'left',
   },
   andikaText: {
     fontFamily: 'Andika_400Regular',
     fontSize: 18,
-    color: '#fff',
+    color: '#bc8888ff',
     textAlign: 'center',
   },
   image: { width: 250, height: 250, borderRadius: 20 },
   customButton: {
-    backgroundColor: 'rgba(236,200,122,0.8)',
+    backgroundColor: 'rgba(239, 167, 196, 0.94)',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 15,
@@ -155,21 +166,22 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
+    
   },
-  customButtonText: { color: '#070314', fontSize: 18, fontWeight: '600' },
+  customButtonText: { color: '#140a35ff', fontSize: 18, fontWeight: '600' },
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(210, 158, 158, 0.5)',
   },
   modalContent: {
-    width: '85%',
+    width: '50%',
     backgroundColor: 'rgba(255,255,255,0.95)',
     borderRadius: 20,
     padding: 25,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: '#aa8509ff',
     shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.3,
     shadowRadius: 20,
@@ -214,4 +226,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
   },
+row: {
+  flexDirection: "row",
+  justifyContent: "space-around",
+  width: "100%",
+},
 });
