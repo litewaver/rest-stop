@@ -12,7 +12,7 @@ function HomeScreen({ navigation }) {
 
   return (
     <ImageBackground
-      source={require('../../assets/pic/background1.jpg')} // Fixed: ../../ instead of ../
+      source={require('../../assets/pic/lakeimage.avif')} // Fixed: ../../ instead of ../
       style={{ flex: 1 }}
       resizeMode="cover"
     >
@@ -28,7 +28,7 @@ function HomeScreen({ navigation }) {
             />
           </View>
 
-<View style={[styles.card, styles.row]} intensity={10} tint="light">
+<View style={[styles.glassOverlay, styles.row]} intensity={10} tint="light">
   <TouchableOpacity
     style={[styles.customButton, { flex: 1, marginRight: 5 }]}
     onPress={() => navigation.navigate("QuizScreen")}
@@ -59,14 +59,12 @@ function HomeScreen({ navigation }) {
           </BlurView>
 
           {/* Button to open popup */}
-          <BlurView intensity={60} tint="light" style={styles.card}>
             <TouchableOpacity
-              style={styles.customButton}
+              style={styles.glassOverlay}
               onPress={() => setModalVisible(true)}
             >
               <Text style={styles.customButtonText}>ℹ️ Learn More</Text>
             </TouchableOpacity>
-          </BlurView>
         </BlurView>
       </ScrollView>
 
@@ -156,7 +154,7 @@ const styles = StyleSheet.create({
   },
   image: { width: 250, height: 250, borderRadius: 20 },
   customButton: {
-    backgroundColor: 'rgba(239, 167, 196, 0.94)',
+    backgroundColor: 'rgba(248, 227, 176, 0.94)',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 15,

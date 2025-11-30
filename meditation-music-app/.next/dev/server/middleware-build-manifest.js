@@ -1,0 +1,26 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/3d978_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_8bf39059._.js",
+    "static/chunks/3d978_next_dist_compiled_react-dom_56e14c1a._.js",
+    "static/chunks/3d978_next_dist_compiled_react-server-dom-turbopack_8cb4472b._.js",
+    "static/chunks/3d978_next_dist_compiled_next-devtools_index_fcbdc7f3.js",
+    "static/chunks/3d978_next_dist_compiled_130ac8f6._.js",
+    "static/chunks/3d978_next_dist_client_f1d4b568._.js",
+    "static/chunks/3d978_next_dist_d8474677._.js",
+    "static/chunks/3d978_@swc_helpers_cjs_0fbc32c1._.js",
+    "static/chunks/meditation-music-app_a0ff3932._.js",
+    "static/chunks/turbopack-meditation-music-app_1d9d7f68._.js"
+  ]
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js"
+];

@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Animated, ImageBackground } from 'react-native';
+import FancyGreeting from '../../AppGreeting';
+
 
 export default function QuizScreen() {
   const questions = [
@@ -71,17 +73,20 @@ export default function QuizScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={[styles.question, { fontFamily: 'Andika_400Regular' }]}>
-        {questions[currentQuestion].question}
-      </Text>
+      <ImageBackground  
+        source={require('../../assets/pic/meditative-figure.avif')}
+        style={StyleSheet.absoluteFill}
+        resizeMode="cover"
+      />
+      <FancyGreeting />
 
       {questions[currentQuestion].choices.map((choice, index) => {
         const shakeValue = shakeAnimations[currentQuestion][index];
 
         return (
-          <TouchableOpacity
+          <TouchableOpacity 
             key={index}
-            style={styles.choiceButton}
+            style={styles.customButton}
             onPress={() => handleChoice(choice, index)}
           >
             <Animated.Text
@@ -97,6 +102,10 @@ export default function QuizScreen() {
       })}
 
       {feedback ? <Text style={styles.feedback}>{feedback}</Text> : null}
+
+      <Text style={[styles.question, { fontFamily: 'Andika_400Regular' }]}>
+        {questions[currentQuestion].question}
+      </Text>
     </View>
   );
 }
@@ -106,15 +115,33 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f2e1ccff',
     alignItems: 'center',
-    justifyContent: 'center',
-    padding: 80,
+    justifyContent: 'flex-bottom',
+    padding: 20,
+    paddingTop: 40,
+  },
+
+  card: {
+
+    width: '90%',
+    backgroundColor: 'rgba(255,255,255,0.15)',
+    borderRadius: 20,
+    padding: 15,
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.2)',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.25,
+    shadowRadius: 20, 
+    elevation: 10,
+    alignItems: 'center',
   },
   question: {
     fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
-    color: '#df829eff',
+    color: '#5619daff',
+    marginTop: 20,
+    marginBottom: 30,
   },
   choiceButton: {
     backgroundColor: '#9995bcff',
@@ -132,4 +159,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: 'italic',
   },
+    customButton: {
+    backgroundColor: 'rgba(248, 227, 176, 0.94)',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 15,
+    alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    }
 });
