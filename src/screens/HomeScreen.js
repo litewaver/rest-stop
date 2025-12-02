@@ -18,7 +18,7 @@ function HomeScreen({ navigation }) {
     >
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <BlurView intensity={40} tint="light" style={styles.glassOverlay}>
-          <Text style={styles.title}>Safer Sounds</Text>
+          <Text style={styles.title}>Rest Stop</Text>
 
           <View intensity={60} tint="light" style={styles.card}>
             <Image

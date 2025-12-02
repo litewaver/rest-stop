@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated, ImageBackground } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, StyleSheet, Animated, ImageBackground } from 'react-native';
 import FancyGreeting from '../../AppGreeting';
-
 
 export default function QuizScreen() {
   const questions = [
@@ -72,9 +71,9 @@ export default function QuizScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={{ flex: 1 }}>
       <ImageBackground  
-        source={require('../../assets/pic/meditative-figure.avif')}
+        source={require('../../assets/pic/meditative-figure-2.avif')}
         style={StyleSheet.absoluteFill}
         resizeMode="cover"
       />
@@ -106,7 +105,8 @@ export default function QuizScreen() {
       <Text style={[styles.question, { fontFamily: 'Andika_400Regular' }]}>
         {questions[currentQuestion].question}
       </Text>
-    </View>
+    </ScrollView>
+    
   );
 }
 
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-bottom',
     padding: 20,
     paddingTop: 40,
+    
   },
 
   card: {
@@ -153,6 +154,7 @@ const styles = StyleSheet.create({
   choiceText: {
     fontSize: 22,
     textAlign: 'center',
+    color: '#ffd4d4ff',
   },
   feedback: {
     marginTop: 20,
@@ -160,7 +162,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
     customButton: {
-    backgroundColor: 'rgba(248, 227, 176, 0.94)',
+    backgroundColor: 'rgba(15, 5, 49, 0.94)',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 15,
@@ -170,5 +172,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
+    flex: 1,
+    justifyContent: "space-evenly", 
+    padding: 15,
     }
 });

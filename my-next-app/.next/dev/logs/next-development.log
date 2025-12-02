@@ -1,0 +1,1851 @@
+[00:00:06.192] Server  LOG      ✓ Ready in 5.2s
+[00:00:13.659] Server  LOG      ○ Compiling / ...
+[00:00:23.351] Browser WARN    Image with src "http://localhost:3001/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:06.913] Server  LOG      ○ Compiling /_not-found/page ...
+[00:07:40.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:40.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:42.866] Server  LOG      ○ Compiling /_error ...
+[00:07:43.345] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:43.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:43.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:43.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.524] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.540] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.540] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.540] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.540] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.540] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.541] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.541] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:45.541] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:46.480] Browser ERROR   uncaughtError: Error: ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+
+
+[00:07:46.544] Browser ERROR   uncaughtError: Error: ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+
+
+[00:07:47.351] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.351] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.351] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.351] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.351] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.353] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.353] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.353] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.353] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:47.353] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:55.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:55.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:55.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:07:55.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:09:36.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:09:36.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:09:57.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:09:57.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:09:57.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:09:57.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:16.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:16.341] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:51.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:51.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:56.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:56.347] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:58.347] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:58.348] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:59.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:10:59.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:08.345] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:08.345] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:10.344] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:10.345] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:13.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:13.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:21.333] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:21.354] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:28.335] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:28.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:50.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:13:50.340] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:14:26.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:14:26.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:14:26.341] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:14:26.341] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:15:11.358] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:15:11.358] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:15:30.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:15:30.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:15:53.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:15:53.350] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:18.188] Server  LOG      ✓ Compiled in 64ms
+[00:16:18.358] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:18.358] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.346] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.347] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.347] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.347] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.347] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/my-next-a...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[00:16:20.356] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.356] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.356] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.356] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:20.356] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/my-next-a...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[00:16:24.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:24.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:28.345] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:28.345] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:42.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:42.340] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:43.340] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:43.340] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:45.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:45.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:46.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:46.340] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:56.332] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:16:56.333] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:22.352] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:22.352] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:22.367] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:22.367] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:28.843] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:28.843] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:28.843] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:28.843] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:29.344] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:29.344] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:34.350] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:34.574] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:34.574] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:34.574] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:34.574] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:35.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:37.335] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:37.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:57.340] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:57.341] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.924] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.924] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.924] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.925] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.925] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.925] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:58.925] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.214] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.214] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.214] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:17:59.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:18:09.336] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:18:09.337] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:19:01.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:19:01.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:19:50.335] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:19:50.335] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.342] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:28:34.343] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.338] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
+[00:29:13.339] Browser ERROR   ./my-next-app/package.json:12:22
+Error parsing package.json file
+  10 |   },
+  11 | "dependencies": {
+> 12 |   "next": "13.6.0",  // Latest stable version of Next.js
+     |                      ^
+  13 |   "react": "18.2.0",  // Latest stable version of React
+  14 |   "react-dom": "18.2.0"  // Latest stable version of React DOM
+  15 | },
+
+package.json is not parseable: invalid JSON: key must be a string at line 12 column 22
