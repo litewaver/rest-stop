@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { ScrollView, Text, TouchableOpacity, StyleSheet, Animated, ImageBackground } from 'react-native';
 import FancyGreeting from '../../AppGreeting';
 
-export default function QuizScreen() {
+export default function QuizScreen({navigation}) {
   const questions = [
     { 
       question: "How are you feeling today?", 
@@ -143,6 +143,7 @@ const styles = StyleSheet.create({
     color: '#5619daff',
     marginTop: 20,
     marginBottom: 30,
+    
   },
   choiceButton: {
     backgroundColor: '#9995bcff',

@@ -1,6 +1,20 @@
 {
-  "plugins": [
-    "expo-font",
-    "expo-audio"
-  ]
+  "expo": {
+    "name": "Shimmer",
+    "slug": "safe-sounds-code",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": [
+      "expo-font",
+      "expo-audio"
+    ],
+    "android": {
+      "package": "com.victoria.shimmer"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7d12c441-2544-477e-b568-f6a866dd0db3"
+      }
+    }
+  }
 }

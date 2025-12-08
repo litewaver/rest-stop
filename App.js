@@ -7,6 +7,7 @@ import BreathingScreen from './src/screens/BreathingScreen';
 import SongScreen from './src/screens/SongScreen';
 import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 import { ActivityIndicator, View } from 'react-native';
+import PomodoroScreen from './src/screens/PomodoroScreen';
 
 // -------------------- Navigator --------------------
 
@@ -38,6 +39,7 @@ export default function App() {
         <Stack.Screen name="QuizScreen" component={QuizPlayer} />
         <Stack.Screen name="BreathingScreen" component={BreathingScreen} />
         <Stack.Screen name="SongScreen" component={SongScreen} />
+        <Stack.Screen name="PomodoroScreen" component={PomodoroScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

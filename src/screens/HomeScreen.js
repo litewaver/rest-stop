@@ -18,7 +18,7 @@ function HomeScreen({ navigation }) {
     >
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <BlurView intensity={40} tint="light" style={styles.glassOverlay}>
-          <Text style={styles.title}>Rest Stop</Text>
+          <Text style={styles.title}>Shimmer</Text>
 
           <View intensity={60} tint="light" style={styles.card}>
             <Image
@@ -49,12 +49,18 @@ function HomeScreen({ navigation }) {
   >
     <Text style={styles.customButtonText}>Quick Start</Text>
   </TouchableOpacity>
+    <TouchableOpacity
+    style={[styles.customButton, { flex: 1, marginLeft: 5 }]}
+    onPress={() => navigation.navigate("PomodoroScreen")}
+  >
+    <Text style={styles.customButtonText}>Pomodoro Timer</Text>
+  </TouchableOpacity>
 </View>
 
 
           <BlurView intensity={60} tint="light" style={styles.card}>
             <Text style={styles.andikaText}>
-              Let's find our inner peace! ☁️🌿🍃✨️{"\n"}Press any button.
+              Let's find our inner peace {"\n"} and discover new songs! ☁️🌿🍃✨️{"\n"}Press any button.
             </Text>
           </BlurView>
 
