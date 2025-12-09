@@ -12,11 +12,12 @@ import Svg, { Circle, Defs, LinearGradient as SvgLinearGradient, Stop } from 're
 
 const { width, height } = Dimensions.get('window');
 
+// Star component
 const Star = ({ style }) => {
   const twinkle = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    Animated.loop(
+    const animation = Animated.loop(
       Animated.sequence([
         Animated.timing(twinkle, {
           toValue: 1,
@@ -29,7 +30,11 @@ const Star = ({ style }) => {
           useNativeDriver: true,
         }),
       ])
-    ).start();
+    );
+    
+    animation.start();
+    
+    return () => animation.stop();
   }, []);
 
   const opacity = twinkle.interpolate({
@@ -48,6 +53,7 @@ const Star = ({ style }) => {
   );
 };
 
+// Cloud component
 const Cloud = ({ style }) => (
   <View style={[styles.cloud, style]}>
     <View style={[styles.cloudPart, { width: 60, height: 30 }]} />
@@ -56,6 +62,7 @@ const Cloud = ({ style }) => (
   </View>
 );
 
+// Main component
 export default function PomodoroScreen() {
   const [timeLeft, setTimeLeft] = useState(25 * 60);
   const [isActive, setIsActive] = useState(false);
@@ -69,15 +76,17 @@ export default function PomodoroScreen() {
     // Initialize stars
     const newStars = Array.from({ length: 50 }, (_, i) => {
       const anim = new Animated.Value(0);
-      starAnimations.push(anim);
       
-      Animated.loop(
+      const loop = Animated.loop(
         Animated.timing(anim, {
           toValue: height,
           duration: 15000 + Math.random() * 10000,
           useNativeDriver: true,
         })
-      ).start();
+      );
+      
+      loop.start();
+      starAnimations.push({ anim, loop });
 
       return {
         id: i,
@@ -91,15 +100,17 @@ export default function PomodoroScreen() {
     // Initialize clouds
     const newClouds = Array.from({ length: 5 }, (_, i) => {
       const anim = new Animated.Value(0);
-      cloudAnimations.push(anim);
       
-      Animated.loop(
+      const loop = Animated.loop(
         Animated.timing(anim, {
           toValue: width + 100,
           duration: 30000 + Math.random() * 20000,
           useNativeDriver: true,
         })
-      ).start();
+      );
+      
+      loop.start();
+      cloudAnimations.push({ anim, loop });
 
       return {
         id: i,
@@ -108,6 +119,12 @@ export default function PomodoroScreen() {
       };
     });
     setClouds(newClouds);
+
+    // Cleanup animations on unmount
+    return () => {
+      starAnimations.forEach(({ loop }) => loop && loop.stop && loop.stop());
+      cloudAnimations.forEach(({ loop }) => loop && loop.stop && loop.stop());
+    };
   }, []);
 
   useEffect(() => {
@@ -142,7 +159,7 @@ export default function PomodoroScreen() {
       style={styles.container}
     >
       {/* Stars */}
-      {stars.map((star, i) => (
+      {stars.map((star) => (
         <Animated.View
           key={star.id}
           style={[
@@ -158,7 +175,7 @@ export default function PomodoroScreen() {
       ))}
 
       {/* Clouds */}
-      {clouds.map((cloud, i) => (
+      {clouds.map((cloud) => (
         <Animated.View
           key={cloud.id}
           style={[

@@ -1,30 +1,19 @@
 import React from 'react';
-import HomeScreen from './src/screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Import your screens - fixed paths
+import HomeScreen from './src/screens/HomeScreen';
 import QuizPlayer from './src/screens/QuizScreen';
 import BreathingScreen from './src/screens/BreathingScreen';
 import SongScreen from './src/screens/SongScreen';
-import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
-import { ActivityIndicator, View } from 'react-native';
 import PomodoroScreen from './src/screens/PomodoroScreen';
-
-// -------------------- Navigator --------------------
+import StickerScreen from './src/screens/StickerScreen';
+import StickerAlbum from './src/screens/StickerAlbum';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  // Move the hook INSIDE the component
-  const [fontsLoaded] = useFonts({ Andika_400Regular });
-
-  if (!fontsLoaded) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#433868ff" />
-      </View>
-    );
-  }
-
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -34,12 +23,13 @@ export default function App() {
           headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
-        {/* Use HomePortal as your main screen */}
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="QuizScreen" component={QuizPlayer} />
         <Stack.Screen name="BreathingScreen" component={BreathingScreen} />
-        <Stack.Screen name="SongScreen" component={SongScreen} />
-        <Stack.Screen name="PomodoroScreen" component={PomodoroScreen} />
+        <Stack.Screen name="SongScreen" component={SongScreen} options={{ title: "Your Songs" }}/>
+        <Stack.Screen name="PomodoroScreen" component={PomodoroScreen} options={{ title: "Pomodoro Timer" }} />
+        <Stack.Screen name="StickerScreen" component={StickerScreen} options={{ title: "Your Stickers" }}/>
+         <Stack.Screen name="StickerAlbum" component={StickerAlbum} options={{ title: "Sticker Album" }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

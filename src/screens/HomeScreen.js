@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { Text, StyleSheet, Image, TouchableOpacity, ScrollView, ImageBackground, Modal, View, Linking } from 'react-native';
 import { BlurView } from 'expo-blur';
+import { useFonts, Andika_400Regular } from '@expo-google-fonts/andika';
 
 // -------------------- Home Page --------------------
 function HomeScreen({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
+  
+  // Load font
+  const [fontsLoaded] = useFonts({
+    Andika_400Regular,
+  });
+
+  // Wait for fonts to load
+  if (!fontsLoaded) {
+    return null;
+  }
 
   const openLink = () => {
     Linking.openURL('https://www.paypal.com/paypalme/valkyrr'); 
@@ -12,7 +23,7 @@ function HomeScreen({ navigation }) {
 
   return (
     <ImageBackground
-      source={require('../../assets/pic/lakeimage.avif')} // Fixed: ../../ instead of ../
+      source={require('../../assets/pic/lakeimage.avif')}
       style={{ flex: 1 }}
       resizeMode="cover"
     >
@@ -20,43 +31,49 @@ function HomeScreen({ navigation }) {
         <BlurView intensity={40} tint="light" style={styles.glassOverlay}>
           <Text style={styles.title}>Shimmer</Text>
 
-          <View intensity={60} tint="light" style={styles.card}>
+          <BlurView intensity={60} tint="light" style={styles.card}>
             <Image
               source={require('../../assets/pic/yoga1.png')}
-              
               style={styles.image}
             />
+          </BlurView>
+
+          <View style={styles.row}>
+            <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate("QuizScreen")}
+            >
+              <Text style={styles.customButtonText}>Check In</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate("SongScreen")}
+            >
+              <Text style={styles.customButtonText}>Start Listening</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate("BreathingScreen")}
+            >
+              <Text style={styles.customButtonText}>Quick Start</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate("PomodoroScreen")}
+            >
+              <Text style={styles.customButtonText}>Pomodoro Timer</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.customButton}
+              onPress={() => navigation.navigate("StickerScreen")}
+            >
+              <Text style={styles.customButtonText}>Stickers</Text>
+            </TouchableOpacity>
           </View>
-
-<View style={[styles.glassOverlay, styles.row]} intensity={10} tint="light">
-  <TouchableOpacity
-    style={[styles.customButton, { flex: 1, marginRight: 5 }]}
-    onPress={() => navigation.navigate("QuizScreen")}
-  >
-    <Text style={styles.customButtonText}>Check In</Text>
-  </TouchableOpacity>
-
-  <TouchableOpacity
-    style={[styles.customButton, { flex: 1, marginHorizontal: 5 }]}
-    onPress={() => navigation.navigate("SongScreen")}
-  >
-    <Text style={styles.customButtonText}>Start Listening</Text>
-  </TouchableOpacity>
-
-  <TouchableOpacity
-    style={[styles.customButton, { flex: 1, marginLeft: 5 }]}
-    onPress={() => navigation.navigate("BreathingScreen")}
-  >
-    <Text style={styles.customButtonText}>Quick Start</Text>
-  </TouchableOpacity>
-    <TouchableOpacity
-    style={[styles.customButton, { flex: 1, marginLeft: 5 }]}
-    onPress={() => navigation.navigate("PomodoroScreen")}
-  >
-    <Text style={styles.customButtonText}>Pomodoro Timer</Text>
-  </TouchableOpacity>
-</View>
-
 
           <BlurView intensity={60} tint="light" style={styles.card}>
             <Text style={styles.andikaText}>
@@ -64,13 +81,12 @@ function HomeScreen({ navigation }) {
             </Text>
           </BlurView>
 
-          {/* Button to open popup */}
-            <TouchableOpacity
-              style={styles.glassOverlay}
-              onPress={() => setModalVisible(true)}
-            >
-              <Text style={styles.customButtonText}>ℹ️ Learn More</Text>
-            </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.learnMoreButton}
+            onPress={() => setModalVisible(true)}
+          >
+            <Text style={styles.customButtonText}>ℹ️ Learn More</Text>
+          </TouchableOpacity>
         </BlurView>
       </ScrollView>
 
@@ -81,14 +97,14 @@ function HomeScreen({ navigation }) {
         visible={modalVisible}
         onRequestClose={() => setModalVisible(false)}
       >
-        <View style={styles.modalOverlay} >
+        <View style={styles.modalOverlay}>
           <BlurView intensity={30} tint="light" style={styles.modalContent}>
             <Text style={styles.modalTitle}>Welcome! 🌟</Text>
             <Text style={styles.modalText}>
               Safer Sounds is your companion for relaxation and mindfulness.
               {"\n\n"}
               We created this to help those suffering, struggling, or simply exist better.
-               {"\n\n"}This app is in it's beta stages, but we wanted
+              {"\n\n"}This app is in it's beta stages, but we wanted
               to release this as soon as possible to help guide you towards greatness in little ways🌈🍃
             </Text>
 
@@ -170,9 +186,27 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
-    
+    marginVertical: 5,
+    minWidth: 150,
   },
-  customButtonText: { color: '#140a35ff', fontSize: 18, fontWeight: '600' },
+  customButtonText: { 
+    color: '#140a35ff', 
+    fontSize: 18, 
+    fontWeight: '600' 
+  },
+  learnMoreButton: {
+    backgroundColor: 'rgba(248, 227, 176, 0.94)',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 15,
+    alignItems: 'center',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    marginTop: 10,
+  },
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',
@@ -180,7 +214,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(210, 158, 158, 0.5)',
   },
   modalContent: {
-    width: '50%',
+    width: '80%',
     backgroundColor: 'rgba(255,255,255,0.95)',
     borderRadius: 20,
     padding: 25,
@@ -230,9 +264,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
   },
-row: {
-  flexDirection: "row",
-  justifyContent: "space-around",
-  width: "100%",
-},
+  row: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    flexWrap: 'wrap',
+    gap: 10,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 20,
+    padding: 15,
+    marginVertical: 10,
+  },
 });

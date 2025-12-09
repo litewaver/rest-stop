@@ -1,18 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
   View,
+  Text,
+  Button,
   Image,
   ScrollView,
   Pressable,
-  Text,
-  Button,
   Modal,
   StyleSheet,
   Animated,
+  Dimensions,
 } from "react-native";
 import { Audio } from "expo-av";
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from "expo-linear-gradient";
 
+const { width } = Dimensions.get("window");
+
+// --- Full list of songs ---
 const songs = [
   {
     title: "Twice - Dance the Night Away",
@@ -72,15 +76,16 @@ const songs = [
     title: "Lykke Li - I Follow Rivers",
     file: require("../../assets/songs/lykkeli-i-follow-rivers.mp3"),
     image: require("../../assets/pic/minecraft.avif"),
-    fact: "Minecraft, IKEA & Spotify are famous global brands from Sweden, Lykke Li's home country. "
-  }
+    fact: "Minecraft, IKEA & Spotify are famous global brands from Sweden, Lykke Li's home country.",
+  },
 ];
 
-const Star = ({ style }) => {
-  const twinkle = useRef(new Animated.Value(0)).current;
+// --- Star Component ---
+const Star = ({ size }) => {
+  const twinkle = useRef(new Animated.Value(Math.random())).current;
 
   useEffect(() => {
-    Animated.loop(
+    const animation = Animated.loop(
       Animated.sequence([
         Animated.timing(twinkle, {
           toValue: 1,
@@ -93,7 +98,12 @@ const Star = ({ style }) => {
           useNativeDriver: true,
         }),
       ])
-    ).start();
+    );
+    
+    animation.start();
+    
+    // Cleanup animation on unmount
+    return () => animation.stop();
   }, []);
 
   const opacity = twinkle.interpolate({
@@ -103,15 +113,19 @@ const Star = ({ style }) => {
 
   return (
     <Animated.View
-      style={[
-        styles.star,
-        style,
-        { opacity }
-      ]}
+      style={{
+        width: size,
+        height: size,
+        backgroundColor: "white",
+        borderRadius: size / 2,
+        opacity,
+        position: "absolute",
+      }}
     />
   );
 };
 
+// --- Main Screen ---
 export default function SongScreen() {
   const [sound, setSound] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -123,35 +137,57 @@ export default function SongScreen() {
   const [stars, setStars] = useState([]);
 
   const fadeAnim = useRef(new Animated.Value(1)).current;
-  const starAnimations = useRef([]).current;
 
-  // Initialize stars
+  // --- Configure Audio Mode ---
   useEffect(() => {
-    const newStars = Array.from({ length: 50 }, (_, i) => {
-      const anim = new Animated.Value(Math.random() * 800);
-      starAnimations.push(anim);
-      
-      const startAnimation = () => {
-        anim.setValue(0);
-        Animated.timing(anim, {
+    async function configureAudio() {
+      try {
+        await Audio.setAudioModeAsync({
+          playsInSilentModeIOS: true,
+          staysActiveInBackground: false,
+          shouldDuckAndroid: true,
+        });
+      } catch (error) {
+        console.error("Error configuring audio:", error);
+      }
+    }
+    configureAudio();
+  }, []);
+
+  // --- Initialize stars ---
+  useEffect(() => {
+    const newStars = Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      x: Math.random() * width,
+      yAnim: new Animated.Value(Math.random() * 800),
+      size: Math.random() * 3 + 1,
+    }));
+
+    const animations = [];
+
+    newStars.forEach((star) => {
+      const animate = () => {
+        star.yAnim.setValue(0);
+        const anim = Animated.timing(star.yAnim, {
           toValue: 800,
           duration: 15000 + Math.random() * 10000,
           useNativeDriver: true,
-        }).start(() => startAnimation());
+        });
+        anim.start(() => animate());
+        return anim;
       };
-      
-      startAnimation();
-
-      return {
-        id: i,
-        x: Math.random() * 100, // percentage
-        size: Math.random() * 3 + 1,
-        animation: anim,
-      };
+      animations.push(animate());
     });
+
     setStars(newStars);
+
+    // Cleanup animations
+    return () => {
+      animations.forEach(anim => anim && anim.stop && anim.stop());
+    };
   }, []);
 
+  // --- Play song ---
   async function playSong(index = currentIndex) {
     if (isLoading) return;
     setIsLoading(true);
@@ -222,41 +258,36 @@ export default function SongScreen() {
     playSong(prevIndex);
   }
 
+  // Cleanup sound on unmount
   useEffect(() => {
     return () => {
-      if (sound) sound.unloadAsync();
+      if (sound) {
+        sound.unloadAsync();
+      }
     };
   }, [sound]);
 
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#312e81', '#581c87', '#9d174d']}
+        colors={["#312e81", "#581c87", "#9d174d"]}
         style={styles.gradient}
       >
         {/* Animated Stars */}
         {stars.map((star) => (
           <Animated.View
             key={star.id}
-            style={[
-              styles.starContainer,
-              {
-                left: `${star.x}%`,
-                transform: [{ translateY: star.animation }],
-              }
-            ]}
+            style={{
+              left: star.x,
+              transform: [{ translateY: star.yAnim }],
+            }}
           >
-            <Star style={{ width: star.size, height: star.size }} />
+            <Star size={star.size} />
           </Animated.View>
         ))}
 
         {/* Moon */}
         <View style={styles.moon} />
-
-        {/* Sparkle decorations */}
-        <Text style={[styles.sparkle, { top: 80, left: '15%' }]}>✨</Text>
-        <Text style={[styles.sparkle, { top: 120, right: '15%' }]}>⭐</Text>
-        <Text style={[styles.sparkle, { top: '60%', left: '10%' }]}>🌟</Text>
 
         {/* Main Content */}
         <Animated.View style={[styles.box, { opacity: fadeAnim }]}>
@@ -319,11 +350,9 @@ export default function SongScreen() {
                     style={styles.image}
                     resizeMode="cover"
                   />
-
                   <ScrollView style={styles.factContainer}>
                     <Text style={styles.factText}>{currentSong.fact}</Text>
                   </ScrollView>
-
                   <View style={styles.modalButtons}>
                     <Button
                       title={isLoading ? "Loading..." : "Play"}
@@ -347,71 +376,18 @@ export default function SongScreen() {
   );
 }
 
+// --- Styles ---
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  gradient: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-  },
-  starContainer: {
-    position: 'absolute',
-    top: -10,
-  },
-  star: {
-    backgroundColor: 'white',
-    borderRadius: 50,
-    shadowColor: 'white',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.8,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  container: { flex: 1 },
+  gradient: { flex: 1, width: "100%", height: "100%" },
   moon: {
-    position: 'absolute',
+    position: "absolute",
     top: 40,
     right: 40,
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#fef3c7',
-    shadowColor: '#fef3c7',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
-    elevation: 10,
-  },
-  sparkle: {
-    position: 'absolute',
-    fontSize: 30,
-    zIndex: 5,
-  },
-  title: { 
-    fontSize: 24, 
-    fontWeight: "bold", 
-    marginBottom: 10, 
-    color: "#fff",
-    textShadowColor: 'rgba(0, 0, 0, 0.5)',
-    textShadowOffset: { width: 0, height: 2 },
-    textShadowRadius: 4,
-  },
-  song: { 
-    fontSize: 18, 
-    marginBottom: 20, 
-    color: "#fff",
-    textAlign: 'center',
-    textShadowColor: 'rgba(0, 0, 0, 0.5)',
-    textShadowOffset: { width: 0, height: 2 },
-    textShadowRadius: 4,
-  },
-  controls: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: 20,
-    alignItems: "center",
-    width: '100%',
+    backgroundColor: "#fef3c7",
   },
   box: {
     alignItems: "center",
@@ -422,70 +398,25 @@ const styles = StyleSheet.create({
     padding: 15,
     flex: 1,
     borderWidth: 2,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderColor: "rgba(255, 255, 255, 0.2)",
   },
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    padding: 10,
-  },
-  gridItem: {
-    width: "48%",
-    marginBottom: 15,
-    alignItems: "center",
-  },
-  songImage: {
-    width: "100%",
-    height: 120,
-    borderRadius: 10,
-  },
-  songLabel: {
-    marginTop: 5,
-    textAlign: "center",
-    color: "#fff",
-    fontSize: 14,
-    fontWeight: "600",
-    textShadowColor: 'rgba(0, 0, 0, 0.5)',
-    textShadowOffset: { width: 0, height: 1 },
-    textShadowRadius: 3,
-  },
-  modalBackground: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.7)",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
-  },
-  modalContainer: {
-    width: "100%",
-    maxWidth: 420,
-    backgroundColor: "#f3f4f6",
-    borderRadius: 20,
-    padding: 16,
-    alignItems: "center",
-    borderWidth: 3,
-    borderColor: 'rgba(168, 85, 247, 0.5)',
-  },
-  image: { 
-    width: "100%", 
-    height: 160, 
-    borderRadius: 12 
-  },
-  factContainer: { 
-    maxHeight: 180, 
-    marginTop: 10, 
-    width: "100%" 
-  },
-  factText: { 
-    fontSize: 16, 
-    color: "#1f2937",
-    lineHeight: 24,
-  },
-  modalButtons: {
+  title: { fontSize: 24, fontWeight: "bold", marginBottom: 10, color: "#fff" },
+  song: { fontSize: 18, marginBottom: 20, color: "#fff", textAlign: "center" },
+  controls: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginTop: 15,
+    marginBottom: 20,
+    alignItems: "center",
     width: "100%",
   },
+  grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", padding: 10 },
+  gridItem: { width: "48%", marginBottom: 15, alignItems: "center" },
+  songImage: { width: "100%", height: 120, borderRadius: 10 },
+  songLabel: { marginTop: 5, textAlign: "center", color: "#fff", fontSize: 14, fontWeight: "600" },
+  modalBackground: { flex: 1, backgroundColor: "rgba(0,0,0,0.7)", justifyContent: "center", alignItems: "center", padding: 20 },
+  modalContainer: { width: "100%", maxWidth: 420, backgroundColor: "#f3f4f6", borderRadius: 20, padding: 16, alignItems: "center" },
+  image: { width: "100%", height: 160, borderRadius: 12 },
+  factContainer: { maxHeight: 180, marginTop: 10, width: "100%" },
+  factText: { fontSize: 16, color: "#1f2937", lineHeight: 24 },
+  modalButtons: { flexDirection: "row", justifyContent: "space-around", marginTop: 15, width: "100%" },
 });
