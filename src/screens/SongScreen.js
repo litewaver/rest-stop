@@ -19,65 +19,36 @@ const { width } = Dimensions.get("window");
 // --- Full list of songs ---
 const songs = [
   {
-    title: "Twice - Dance the Night Away",
-    file: require("../../assets/songs/twice-dance-the-night-away.mp3"),
-    image: require("../../assets/pic/bibimbap.jpg"),
-    fact: "Twice is one of the most popular Korean girl groups worldwide! Pictured is Bibimbap, a famous Korean rice dish with vegetables and protein.",
+    title: "Brown Noise",
+    file: require("../../assets/music/brownnoise.mp3"),
+    image: require("../../assets/pic/brownnoise.jpg"),
+    fact: "Pictured is Bibimbap, a famous Korean rice dish with vegetables and protein.",
   },
   {
-    title: "4minute - Hot Issue",
-    file: require("../../assets/songs/4minute-hot-issue.mp3"),
-    image: require("../../assets/pic/bibimbap.jpg"),
-    fact: "This song is from 2009, it's a K-pop classic! Bibimbap is a traditional Korean dish meaning 'mixed rice'.",
+    title: "Calming Rain",
+    file: require("../../assets/music/calmingrain.mp3"),
+    image: require("../../assets/pic/rain.jpg"),
+    fact: "Bibimbap is a traditional Korean dish meaning 'mixed rice'.",
   },
   {
-    title: "Blond:ish - Sete",
-    file: require("../../assets/songs/blondish-sete.mp3"),
-    image: require("../../assets/pic/eurovision.jpg"),
-    fact: "Interesting Fact: 'Sete' by Blond:ish is known for its deep house vibes.",
+    title: "Pink Noise",
+    file: require("../../assets/music/pinknoise.mp3"),
+    image: require("../../assets/pic/pinknoise.jpg"),
+    fact: "j",
   },
   {
-    title: "Go_A - Shum",
-    file: require("../../assets/songs/go-a-shum.mp3"),
-    image: require("../../assets/pic/eurovision.jpg"),
+    title: "Fireplace",
+    file: require("../../assets/music/fireplace.mp3"),
+    image: require("../../assets/pic/fireplace.jpg"),
     fact: "'Shum' by Go_A represented Ukraine in Eurovision 2021.",
   },
   {
-    title: "Madonna - Hung Up",
-    file: require("../../assets/songs/madonna-hung-up.mp3"),
-    image: require("../../assets/pic/madonna.jpg"),
+    title: "River",
+    file: require("../../assets/music/river.mp3"),
+    image: require("../../assets/pic/river.jpg"),
     fact: "Madonna is often described as the 'Queen of Pop'!",
   },
-  {
-    title: "Papa Roach - Gravity",
-    file: require("../../assets/songs/paparoach-gravity.mp3"),
-    image: require("../../assets/pic/daisyrock1.webp"),
-    fact: "Papa Roach uses the band to reach out to fans going through tough times.",
-  },
-  {
-    title: "Royal Republic - Addictive",
-    file: require("../../assets/songs/royal-republic-addictive.mp3"),
-    image: require("../../assets/pic/royalrepublic.jpg"),
-    fact: "Royal Republic is a Swedish rock band. Sweden is known for Surströmming, one of the world's smelliest foods!",
-  },
-  {
-    title: "Rihanna - Umbrella",
-    file: require("../../assets/songs/rihanna-umbrella.mp3"),
-    image: require("../../assets/pic/barbados.png"),
-    fact: "Barbados, Rihanna's home country, is a Caribbean island known for its beaches.",
-  },
-  {
-    title: "THE BOHEMIANS - I Ride Genius Band Story",
-    file: require("../../assets/songs/thebohemians-i-ride-genius-band-story.mp3"),
-    image: require("../../assets/pic/bobatea.jpg"),
-    fact: "Boba tea is a popular sweet drink that originated in Taiwan in the 1980s.",
-  },
-  {
-    title: "Lykke Li - I Follow Rivers",
-    file: require("../../assets/songs/lykkeli-i-follow-rivers.mp3"),
-    image: require("../../assets/pic/minecraft.avif"),
-    fact: "Minecraft, IKEA & Spotify are famous global brands from Sweden, Lykke Li's home country.",
-  },
+  
 ];
 
 // --- Star Component ---

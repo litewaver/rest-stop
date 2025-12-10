@@ -4,12 +4,23 @@
     "slug": "safe-sounds-code",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/shimmerlogo.png",
+    "splash": {
+      "image": "./assets/shimmerlogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#e8f4f8"
+    },
     "plugins": [
       "expo-font",
       "expo-audio"
     ],
     "android": {
-      "package": "com.victoria.shimmer"
+      "package": "com.victoria.shimmer",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/shimmerlogo.png",
+        "backgroundColor": "#e8f4f8"
+      }
     },
     "extra": {
       "eas": {
